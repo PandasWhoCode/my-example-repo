@@ -1,0 +1,19 @@
+name: Update Repo Custom Properties
+
+description: Updates the repo custom properties as defined in the provided governance repo, repo-properties.yaml file.
+
+on:
+  workflow_dispatch:
+
+jobs:
+  update-properties:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: andrewb1269hg/update-custom-props@main
+        with:
+          governance-repo-url: 'https://github.com/org-andrewb1269hg/my-governance-repo.git'
+
+      - name: Use the metadata
+        run: |
+          echo "Last update by: ${{ env.last-update-by }}"
+          echo "Last modified: ${{ env.last-date-modified }}"
