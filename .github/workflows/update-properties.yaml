@@ -12,15 +12,3 @@ jobs:
       - uses: andrewb1269hg/update-custom-props@main
         with:
           governance-repo-url: 'https://github.com/org-andrewb1269hg/my-governance-repo.git'
-
-      - name: Call GitHub API to list variables
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          OWNER: ${{ github.repository_owner }}
-          REPO: ${{ github.event.repository.name }}
-        run: |
-          echo "Fetching all repo-level variables..."
-          curl -s -H "Authorization: Bearer $GH_TOKEN" \
-               -H "Accept: application/vnd.github+json" \
-               "https://api.github.com/repos/$OWNER/$REPO/actions/variables" \
-               | jq '.variables[] | "\(.name)=\(.value)"'
