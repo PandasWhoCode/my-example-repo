@@ -30,7 +30,7 @@ jobs:
           echo "Running ls now"
           ls -la
 
-      - uses: andrewb1269hg/update-custom-props@v0.0.2
+      - uses: andrewb1269hg/update-custom-props@main
         with:
-          governance-repo-url: 'https://github.com/org-andrewb1269hg/my-governance-repo.git'
+          governance-repo-url: 'https://github.com/PandasWhoCode/my-governance-repo.git'
           token: ${{ secrets.GH_CUSTOM_PROPERTIES_TOKEN }}
