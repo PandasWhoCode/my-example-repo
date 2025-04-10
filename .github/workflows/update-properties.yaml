@@ -20,7 +20,7 @@ jobs:
         with:
           fetch-depth: "0"
           ref: ${{ steps.validate.outputs.build-tag }}
-          token: ${{ secrets.GH_ACCESS_TOKEN }}
+          token: ${{ secrets.GH_CUSTOM_PROPERTIES_TOKEN }}
 
       - name: List current checkout
         run: |
@@ -33,4 +33,4 @@ jobs:
       - uses: andrewb1269hg/update-custom-prop@v0.0.2
         with:
           governance-repo-url: 'https://github.com/org-andrewb1269hg/my-governance-repo.git'
-          token: ${{ secrets.GH_ACCESS_TOKEN }}
+          token: ${{ secrets.GH_CUSTOM_PROPERTIES_TOKEN }}
