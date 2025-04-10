@@ -27,6 +27,6 @@ jobs:
           echo "Running ls now"
           ls -la
 
-      - uses: andrewb1269hg/update-custom-props@3-create-action-to-update-custom-properties-in-a-repo
-        with:
-          governance-repo-url: 'https://github.com/org-andrewb1269hg/my-governance-repo.git'
+#      - uses: andrewb1269hg/update-custom-props@3-create-action-to-update-custom-properties-in-a-repo
+#        with:
+#          governance-repo-url: 'https://github.com/org-andrewb1269hg/my-governance-repo.git'
