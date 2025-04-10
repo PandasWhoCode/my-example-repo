@@ -24,6 +24,8 @@ jobs:
       - name: List current checkout
         run: |
           echo "Cloned current repo"
+          echo "Running pwd now"
+          pwd
           echo "Running ls now"
           ls -la
 
