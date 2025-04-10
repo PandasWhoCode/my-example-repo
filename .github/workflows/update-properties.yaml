@@ -20,6 +20,7 @@ jobs:
         with:
           fetch-depth: "0"
           ref: ${{ steps.validate.outputs.build-tag }}
+          token: ${{ secrets.GH_ACCESS_TOKEN }}
 
       - name: List current checkout
         run: |
@@ -29,6 +30,7 @@ jobs:
           echo "Running ls now"
           ls -la
 
-      - uses: andrewb1269hg/update-custom-props@v0.0.1
-        with:
-          governance-repo-url: 'https://github.com/org-andrewb1269hg/my-governance-repo.git'
+#      - uses: andrewb1269hg/update-custom-props@v0.0.1
+#        with:
+#          governance-repo-url: 'https://github.com/org-andrewb1269hg/my-governance-repo.git'
+#          token: ${{ secrets.GH_ACCESS_TOKEN }}
