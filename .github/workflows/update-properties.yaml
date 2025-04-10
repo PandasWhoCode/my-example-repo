@@ -5,6 +5,11 @@ description: Updates the repo custom properties as defined in the provided gover
 on:
   workflow_dispatch:
 
+permissions:
+  id-token: read
+  contents: read
+  actions: read
+
 jobs:
   update-properties:
     runs-on: ubuntu-latest
