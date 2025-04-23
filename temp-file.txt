@@ -1,1 +1,5 @@
+git-semver testing commands:
+git-semver next --stable=false
+git-semver next --stable=false --pre-release-tag=alpha --pre-release-counter
+
 Add a baseline file.
