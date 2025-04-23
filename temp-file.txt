@@ -3,3 +3,5 @@ git-semver next --stable=false
 git-semver next --stable=false --pre-release-tag=alpha --pre-release-counter
 
 Add a baseline file.
+
+Add a pretend bug fix.
