@@ -5,3 +5,4 @@ git-semver next --stable=false --pre-release-tag=alpha --pre-release-counter
 Add a baseline file.
 
 Add a fix on main.
+Add a feat on main.
